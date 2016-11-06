@@ -36,3 +36,10 @@ echo "Installing Bytecodeviewer ..."
 $(unzip *.zip) 
 $(find . -type f -not -name '*jar' -print0 | xargs -0 rm --)
 
+# Install APKid
+echo "###### INSTALLING APKiD ######"
+git clone https://github.com/rednaga/yara-python
+cd yara-python
+python setup.py install
+pip install apkid
+cd ../
