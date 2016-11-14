@@ -55,3 +55,10 @@ git clone https://github.com/longld/peda.git ~/peda
 echo "source ~/peda/peda.py" >> ~/.gdbinit
 
 
+# Install APKid
+echo "###### INSTALLING APKiD ######"
+git clone https://github.com/rednaga/yara-python
+cd yara-python
+python setup.py install
+pip install apkid
+cd ../
