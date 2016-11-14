@@ -33,6 +33,25 @@ cd bytecodeviewer
 echo "Downloading Bytecodeviewer ..."
 $(curl -LOk https://github.com/Konloch/bytecode-viewer/releases/download/v2.9.8/BytecodeViewer.2.9.8.zip)
 echo "Installing Bytecodeviewer ..."
-$(unzip *.zip) 
+$(unzip *.zip)
 $(find . -type f -not -name '*jar' -print0 | xargs -0 rm --)
+cd ../
+
+# Install JTool
+echo "###### INSTALLING JTOOL ######"
+mkdir -p jtool
+cd jtool
+echo "Downloading jtool ..."
+curl -LOk http://www.newosxbook.com/tools/jtool.tar
+echo "Installing jtool ..."
+tar -xvf jtool.tar
+cp jtool /usr/local/bin
+chmod +x /usr/local/bin/jtool
+cd ../
+
+# Install peda-gdb
+echo "###### INSTALLING PEDA GDB ######"
+git clone https://github.com/longld/peda.git ~/peda
+echo "source ~/peda/peda.py" >> ~/.gdbinit
+
 
