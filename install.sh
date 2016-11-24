@@ -62,3 +62,8 @@ cd yara-python
 python setup.py install
 pip install apkid
 cd ../
+
+# Install mitmproxy
+echo "###### Installing mitmproxy ######"
+pip install mitmproxy
+
