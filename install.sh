@@ -67,3 +67,15 @@ cd ../
 echo "###### Installing mitmproxy ######"
 pip install mitmproxy
 
+# Install Voltron
+echo "###### Installing Voltron ######"
+git clone https://github.com/snare/voltron
+cd voltron
+./install.sh
+cd ../
+
+# Install pwndbg
+echo "###### Installing pwndbg"
+git clone https://github.com/pwndbg/pwndbg
+cd pwndbg
+./setup.sh
